@@ -15,8 +15,9 @@
 }
 
 header {
-    position: fixed;
+    display: block;
     width: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 header .top {
@@ -28,6 +29,8 @@ header .top {
 }
 
 header .top .left {
+    width: 40%;
+    padding-bottom: 1rem;
     display: flex;
     align-items: center;
 }
@@ -85,9 +88,9 @@ header .top .right a i {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    transition: 1ms;
+    transition: top 0.3s ease;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 }
-
 .nav .left,
 .nav .right {
     flex: 1;
@@ -114,13 +117,24 @@ header .top .right a i {
 .nav .left ul li,
 .nav .right ul li {
     margin: 1rem 2rem;
-    cursor: pointer;
 }
 
-.nav .left ul li:hover,
-.nav .right ul li:hover {
+.nav .left ul li a,
+.nav .right ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: "Lato", sans-serif;
+}
+
+.nav .left ul li a:hover,
+.nav .right ul li a:hover {
     color: #38a3a5;
     transform: translateY(-5px);
+}
+
+.nav .left ul li a:active,
+.nav .right ul li a:active {
+    text-decoration: underline;
 }
 
 .custom-shape-divider-top-1727387197 {
@@ -144,13 +158,77 @@ header .top .right a i {
     fill: #ffffff;
 }
 
+.scrollmenu {
+    display: none;
+}
+
+.scroll {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll img {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    transform: translateY(+40%);
+}
+
+.scroll ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.scroll ul li {
+    /* margin: 1rem 2rem; */
+    padding: 1rem 1rem;
+}
+
+.scroll ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: "Lato", sans-serif;
+}
+
+.scroll ul li a:hover {
+    color: #38a3a5;
+}
+
+.scroll .foglalok {
+    background-color: #38a3a5;
+    padding: 0.7rem 2rem;
+}
+
+.scroll .foglalok a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+}
+
 main {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), #2d3480),
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #38a3a5),
         url(images/try_bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.about {
+    background-color: #38a3a5;
+}
+
+.about h1 {
+    top: 2rem;
+    text-align: center;
 }
