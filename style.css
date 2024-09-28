@@ -176,7 +176,6 @@ header .top .right a i {
 .scroll img:hover {
     border: 1px solid #38a3a5;
     cursor: pointer;
-    transform: rotate(360deg);
 }
 
 .scroll ul {
@@ -467,10 +466,15 @@ header .top .right a i {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 #gallery h1 {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: left;
     /* margin-bottom: 0.2rem */
     font-size: 2.5rem;
@@ -487,21 +491,23 @@ header .top .right a i {
 
 .gallery-container {
     display: flex;
-    justify-content: space-evenly;
-    margin: 1rem;
+    justify-content: center;
+    padding-top: 2rem;
     flex-wrap: wrap;
     transition: 1s ease;
+    z-index: 10;
 }
 
 .gallery-container img {
-    width: 300px;
+    width: 200px;
     object-fit: cover;
-    margin: 0 0.6rem;
+    margin: 0.6rem 0.6rem;
     border-radius: 10px;
     transition: 0.5s ease;
 }
 
 .gallery-container a img:hover {
+    opacity: 0.5;
     transform: scale(1.1);
     cursor: zoom-in;
 }
