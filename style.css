@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
 /* colors: 
     primary: #c4e9ec
     secondary: #2d3480
@@ -10,7 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Lato", "Poppins", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -236,6 +238,7 @@ header .top .right a i {
 }
 
 .main .title h1 {
+    font-family: "Lora", sarif;
     color: #fff;
     font-size: 5.5rem;
     font-weight: 600;
@@ -243,6 +246,7 @@ header .top .right a i {
 }
 
 .main .title p {
+    font-family: "Lora", sarif;
     color: #fff;
     font-size: 1.5rem;
 }
@@ -279,6 +283,7 @@ header .top .right a i {
 }
 
 .title-text h2 {
+    font-family: "Lora", sarif;
     margin-bottom: 2rem;
     font-size: 2.5rem;
     color: #fff;
@@ -311,6 +316,7 @@ header .top .right a i {
 }
 
 .about h2 {
+    font-family: "Lora", sarif;
     text-align: left;
     margin-bottom: 0.8rem;
     font-size: 2rem;
@@ -368,6 +374,7 @@ header .top .right a i {
 }
 
 #apartman h1 {
+    font-family: "Lora", sarif;
     text-align: left;
     margin-bottom: 1rem;
     font-size: 2.5rem;
