@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Admirál Apartmanok Csopak</title>
         <link rel="stylesheet" href="lightbox.css" />
         <link rel="stylesheet" href="style.css" />
+        <!-- Lightbox CSS for Gallery -->
+        <link rel="stylesheet" href="css/lightbox.css" />
+
+        <!-- Basic CSS for Gallery -->
+        <link rel="stylesheet" href="css/styles.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -50,9 +55,9 @@
 
                 <div class="right">
                     <ul>
-                        <li><a href="">Csomagajánlatok</a></li>
-                        <li><a href="">Partnerek</a></li>
-                        <li><a href="">Kapcsolat</a></li>
+                        <li><a href="#offers">Csomagajánlatok</a></li>
+                        <li><a href="#partners">Partnerek</a></li>
+                        <li><a href="#connect">Kapcsolat</a></li>
                     </ul>
                 </div>
                 <a href="index.html"
@@ -67,9 +72,9 @@
                     <li><a href="#about">Rólunk</a></li>
                     <li><a href="#apartman">Apartmanok</a></li>
                     <li><a href="#gallery">Galéria</a></li>
-                    <li><a href="">Csomagajánlatok</a></li>
-                    <li><a href="">Partnerek</a></li>
-                    <li><a href="">Kapcsolat</a></li>
+                    <li><a href="#offers">Csomagajánlatok</a></li>
+                    <li><a href="#partners">Partnerek</a></li>
+                    <li><a href="#connect">Kapcsolat</a></li>
                 </ul>
                 <div class="foglalok">
                     <a href="tel:+36309876543">Foglalok</a>
@@ -319,81 +324,105 @@
                     </svg>
                 </div>
             </div>
-            <!-- <h1>Galéria</h1>
-            <p>További képekért kattinston a képekre...</p> -->
             <div class="gallery-container">
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6372.jpg"
-                    ><img src="images/gallery/IMG_6372.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="foltika"
-                    href="images/gallery/IMG_6375.jpg"
-                    ><img src="images/gallery/IMG_6375.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="foltika"
-                    href="images/gallery/IMG_6584.jpg"
-                    ><img src="images/gallery/IMG_6584.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
-                <a
-                    data-lightbox="gallery"
-                    data-title="cooperke"
-                    href="images/gallery/IMG_6593.jpg"
-                    ><img src="images/gallery/IMG_6593.jpg" alt=""
-                /></a>
+                <div class="wrapper">
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_6372.jpg"
+                            data-lightbox="image-grid"
+                            data-title="Hay Bales I love hay bales.
+                        Took this snap on a drive through the countryside past some straw fields.
+                       "
+                            ><img
+                                src="images/gallery/IMG_6372.jpg"
+                                alt="Hay Bales, Straw Fields"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_6375.jpg"
+                            data-lightbox="image-grid"
+                            data-title="The lake was so calm today.
+                        We had a great view of the snow on the mountains from here."
+                        >
+                            <img
+                                src="images/gallery/IMG_6375.jpg"
+                                alt="Lake, Calm, Mountains"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_6375.jpg"
+                            data-lightbox="image-grid"
+                            data-title="I hiked to the top of the
+                        mountain and got this picture of the canyon and trees below."
+                        >
+                            <img
+                                src="images/gallery/IMG_6375.jpg"
+                                alt="Canyon, Trees, Mountain"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_6375.jpg"
+                            data-lightbox="image-grid"
+                            data-title="It was amazing to see an
+                        iceberg up close, it was so cold but didn’t snow today."
+                        >
+                            <img
+                                src="images/gallery/IMG_6375.jpg"
+                                alt="Iceberg, Snow, Cold"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_6375.jpg"
+                            data-lightbox="image-grid"
+                            data-title="The red cliffs were beautiful.
+                        It was really hot in the desert but we did a lot of walking through the canyons."
+                        >
+                            <img
+                                src="images/gallery/IMG_6375.jpg"
+                                alt="Desert, Cliffs, Canyons"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_7693.jpg"
+                            data-lightbox="image-grid"
+                            data-title="Fall is coming,
+                        I love when the leaves on the trees start to change color."
+                        >
+                            <img
+                                src="images/gallery/IMG_7693.jpg"
+                                alt="Fall, Leaves"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_7693.jpg"
+                            data-lightbox="image-grid"
+                            data-title="I drove past this plantation
+                        yesterday, everything is so green!"
+                        >
+                            <img
+                                src="images/gallery/IMG_7693.jpg"
+                                alt="Plantation, Green"
+                        /></a>
+                    </div>
+                    <div class="thumb">
+                        <a
+                            href="images/gallery/IMG_7693.jpg"
+                            data-lightbox="image-grid"
+                            data-title="My summer vacation
+                        to the Oregon Coast. I love the sandy dunes!"
+                        >
+                            <img
+                                src="images/gallery/IMG_7693.jpg"
+                                alt="Dunes, Sand"
+                        /></a>
+                    </div>
+                </div>
             </div>
             <div class="custom-shape-divider-bottom-1727535997">
                 <svg
@@ -419,8 +448,195 @@
                 </svg>
             </div>
         </section>
+        <section id="offers">
+            <h1>Ajánlataink</h1>
+            <div class="offers-container">
+                <div class="offer-card" id="offers-start">
+                    <div class="top">
+                        <div class="top-img">
+                            <img src="images/naplemente.jpg" alt="" />
+                            <div class="price">120.000 Ft-tól...</div>
+                        </div>
+                        <div class="overlay">
+                            <h4>Romantikus hétköznapok</h4>
+                            <p>(Vasárnap - Csütörtök)</p>
+                            <br />
+                            <p>
+                                Lepje meg szerelmét egy felejthetetlen
+                                élménnyel! <br />
+                                Bújjon el párjával hétköznap két éjszakára a
+                                gyönyörű, csendes és nyugodt Csopakon.
+                            </p>
+                            <p></p>
+                            <br />
+                            <p>A csomag tartalma:</p>
+                            <br />
+                            <ul>
+                                <li>3 nap / 2 éjszaka / 2 felnőtt számára</li>
+                                <li>1 üveg minőségi pezsgő</li>
+                                <li>100nm2-es Penthouse</li>
+                                <li>Balatoni panorámás jacuzzival</li>
+                                <li>Teljesen felszerelt konyha</li>
+                                <li>Kávé-tea bekészítés</li>
+                                <li>
+                                    Igény esetén friss,kosaras reggeli (felár
+                                    ellenében)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <class class="bottom">
+                        <h2>Romantikus hétköznapok</h2>
+                    </class>
+                </div>
+                <div class="offer-card">
+                    <div class="top">
+                        <div class="top-img">
+                            <img src="images/naplemente.jpg" alt="" />
+                            <div class="price">160.000 ft-tól...</div>
+                        </div>
+                        <div class="overlay">
+                            <h3>Romantikus hétköznapok</h3>
+                            <p>(Péntek - Vasárnap)</p>
+                            <br />
+                            <p>
+                                Lepje meg szerelmét egy felejthetetlen
+                                élménnyel! <br />
+                                Bújjon el párjával hétköznap két éjszakára a
+                                gyönyörű, csendes és nyugodt Csopakon.
+                            </p>
+                            <p></p>
+                            <br />
+                            <p>A csomag tartalma:</p>
+                            <br />
+                            <ul>
+                                <li>3 nap / 2 éjszaka / 2 felnőtt számára</li>
+                                <li>2 üveg minőségi pezsgő</li>
+                                <li>100nm2-es Penthouse</li>
+                                <li>Balatoni panorámás jacuzzival</li>
+                                <li>Teljesen felszerelt konyha</li>
+                                <li>Kávé-tea bekészítés</li>
+                                <li>
+                                    Igény esetén friss,kosaras reggeli (felár
+                                    ellenében)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <class class="bottom">
+                        <h2>Romantikus hétvégék</h2>
+                    </class>
+                </div>
+                <div class="offer-card">
+                    <div class="top">
+                        <div class="top-img">
+                            <img src="images/naplemente.jpg" alt="" />
+                            <div class="price">129.000 ft-tól...</div>
+                        </div>
+                        <div class="overlay">
+                            <h4>részletek</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+                    </div>
+                    <class class="bottom">
+                        <h2>Szerelmes hétvégék Csopakon</h2>
+                    </class>
+                </div>
+                <div class="offer-card">
+                    <div class="top">
+                        <div class="top-img">
+                            <img src="images/naplemente.jpg" alt="" />
+                            <div class="price">129.000 ft-tól...</div>
+                        </div>
+                        <div class="overlay">
+                            <h4>részletek</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+                    </div>
+                    <class class="bottom">
+                        <h2>Szerelmes hétvégék Csopakon</h2>
+                    </class>
+                </div>
+            </div>
+            <p>
+                Ajánlataink érvényesek, 2024.Október 15. - 2025 március 14.
+                között, szabad helyek függvényében.
+            </p>
+            <p>
+                Kivételt képeznek a kiemelt időszakok (iskola szünet,
+                ünnepnapok, hosszú hétvégék).
+            </p>
+            <p>
+                Bővebb tájékoztatásért keressenek bátran az elérhetőségeink
+                egyikén!
+            </p>
+            <div class="apartman-btns">
+                <a href=""><button class="apartman-btn">Foglalok</button></a>
+                <a href=""
+                    ><button class="apartman-btn">Online foglalok</button></a
+                >
+            </div>
+        </section>
+        <section id="partners">
+            <h2>Partnereink</h2>
+            <div class="partners-container">
+                <a href="">
+                    <img src="images/partners/csopak.svg" alt="csopak"
+                /></a>
+                <a href="">
+                    <img
+                        src="images/partners/koronczai.jpg"
+                        alt="koronczai pincészet"
+                /></a>
+                <a href="">
+                    <img src="images/partners/bfood.jpg" alt="balaton food"
+                /></a>
+            </div>
+        </section>
+
+        <footer id="connect">
+            <div class="title-text"></div>
+            <div class="foglalas">
+                <p>Kedvező ajánlatokért foglaljon közvetlenül nálunk .</p>
+                <p>
+                    Egyedi árakért keressen minket bizalommal, az alábbi
+                    elérhetőségek egyikén.
+                </p>
+            </div>
+            <div class="footer-row">
+                <div class="footer-left">
+                    <h3>Elérhetőségeink</h3>
+                    <p><i class="fa fa-phone"></i>+36301234567</p>
+                    <p>
+                        <i class="fa fa-paper-plane"></i>hello@admiralcsopak.hu
+                    </p>
+                    <p>
+                        <i class="fa fa-location-dot"></i>Csopak , Ifjúsági
+                        sétány 4
+                    </p>
+                    <div class="social-links">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.56434447175!2d17.93475127691218!3d46.9702490711386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769bd8d276865bb%3A0xb0fd5dba7ddfb0b9!2zQ3NvcGFrLCBJZmrDunPDoWdpIHN0bnkuIDQsIDgyMjk!5e0!3m2!1shu!2shu!4v1727700382074!5m2!1shu!2shu"
+                        width="400"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+            <p>2024 <i class="fa-regular fa-copyright"></i> Admirál Csopak</p>
+        </footer>
 
         <script src="lightbox-plus-jquery.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/scripts.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

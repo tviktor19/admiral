@@ -219,6 +219,8 @@ header .top .right a i {
 .scroll .foglalok:hover a {
     color: black;
 }
+
+/* Main */
 .main {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.1), #38a3a5),
@@ -283,13 +285,17 @@ header .top .right a i {
     background-color: #38a3a5;
     height: 100vh;
     padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-text h2 {
     font-family: "Lora", sarif;
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
     text-align: center;
 }
@@ -310,7 +316,7 @@ header .top .right a i {
 .about-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .about-img {
@@ -385,7 +391,7 @@ header .top .right a i {
 #apartman h1 {
     font-family: "Lora", sarif;
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     font-weight: bold;
     color: #38a3a5;
@@ -394,10 +400,13 @@ header .top .right a i {
 }
 
 .apartman-container {
+    width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     transition: 0.5s ease;
+    margin-bottom: 2rem;
 }
 
 .apartman-card {
@@ -405,7 +414,7 @@ header .top .right a i {
     flex-direction: column;
     width: 17rem;
     transition: 1ms;
-    margin: 1rem 1rem;
+    /* margin: 1rem 1rem; */
     transition: 0.5s ease;
 }
 
@@ -480,43 +489,68 @@ header .top .right a i {
     min-height: 100vh;
     background-color: #38a3a5;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-#gallery h1 {
-    position: absolute;
-    top: 4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: left;
-    /* margin-bottom: 0.2rem */
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    /* padding-top: 2rem; */
+.wrapper {
+    width: 90%;
+    margin: 1rem auto;
 }
 
-#gallery p {
-    text-align: center;
-    color: #fff;
+.thumb {
+    padding: 20px;
+}
+
+.thumb img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media (min-width: 1px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        max-width: 240px;
+    }
+}
+@media (min-width: 500px) {
+    .wrapper {
+        max-width: 480px;
+    }
+}
+@media (min-width: 970px) {
+    .wrapper {
+        max-width: 960px;
+    }
+
+    .lightbox .lb-image {
+        max-width: 1100px;
+        max-height: 700px;
+    }
 }
 
 .gallery-container {
+    width: 90%;
+    transition: 1s ease;
+    margin: 5rem auto 2rem;
+    z-index: 30;
+}
+
+.gallery-container a {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    transition: 1s ease;
-    z-index: 10;
+    align-items: center;
+    width: 100%;
 }
 
 .gallery-container img {
-    width: 200px;
+    width: 100%;
     object-fit: cover;
-    margin: 0.6rem 0.6rem;
     border-radius: 10px;
     transition: 0.5s ease;
 }
@@ -566,4 +600,362 @@ header .top .right a i {
 
 .custom-shape-divider-bottom-1727535997 .shape-fill {
     fill: #ffffff;
+}
+
+/* Offers */
+
+#offers {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#offers h1 {
+    font-size: 2rem;
+    color: #38a3a5;
+
+    margin-bottom: 2rem;
+}
+
+.offers-container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.offers-container .offer-card {
+    margin: 1rem;
+    width: 100%;
+    max-width: 520px;
+    border: 1px solid #38a3a5;
+}
+
+.offer-card .top {
+    position: relative;
+}
+
+.offer-card .top .top-img {
+    position: relative;
+}
+
+.offer-card .top img {
+    width: 100%;
+}
+
+.offer-card .top .price {
+    font-size: 1rem;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    padding: 1rem;
+    color: #fff;
+    background-color: #38a3a5;
+    text-align: center;
+}
+
+.offer-card .top .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #38a3a5;
+    transition: opacity 0.5s ease;
+    padding: 1.2rem;
+}
+
+.offer-card .top .overlay h3,
+p {
+    text-align: center;
+}
+
+.offer-card:hover .overlay {
+    opacity: 1;
+}
+
+.offer-card:hover .bottom h2 {
+    background-color: #38a3a5;
+    color: #fff;
+}
+
+.offer-card .bottom h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    color: #38a3a5;
+    transition: 0.5s ease;
+}
+
+#offers > p {
+    font-size: 0.8rem;
+    color: #38a3a5;
+}
+
+/* Partners */
+
+#partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #38a3a5;
+    height: 100%;
+}
+
+#partners h2 {
+    color: #fff;
+    margin: 2rem auto;
+}
+
+.partners-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.partners-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.partners-container a:hover img {
+    transform: scale(1.3);
+}
+
+/* Footer section */
+
+#connect {
+    padding: 40px 0 20px;
+    background: #2a2a2a;
+    position: relative;
+}
+
+#connect .foglalas {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#connect .foglalas h2 {
+    font-size: 40px;
+}
+
+.footer-row {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-left {
+    color: #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-row h3 {
+    margin: 10px 0;
+}
+
+.footer-row p {
+    line-height: 35px;
+}
+
+.footer-left .fa,
+.footer-right .fa {
+    font-size: 1rem;
+    color: #38a3a5;
+    margin-right: 1rem;
+}
+
+iframe {
+    width: 60%;
+    height: 100%;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.social-links .fa-brands {
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-links .fa-brands:hover {
+    background-color: #38a3a5;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.social-links p {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#connect > p {
+    color: #fff;
+    padding: 1rem;
+}
+
+/* Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0.5;
+        /* transform: translateX(-100px); */
+        scale: 0.2;
+    }
+    to {
+        opacity: 1;
+        /* transform: translateX(0px); */
+        scale: 1;
+    }
+}
+
+.animated {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Media quarry */
+
+@media only screen and (max-width: 480px) {
+    header {
+        display: none;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .main .title {
+        justify-content: space-between;
+    }
+
+    .main .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .main .title p {
+        font-size: 1rem;
+    }
+
+    .main .title .main-btns {
+        margin: 2rem auto;
+    }
+
+    .main-btn {
+        width: 8rem;
+        height: 3rem;
+        font-size: 0.8rem;
+    }
+
+    #about {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .about-box {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .title-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.8rem;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .apartman-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .thumb:nth-child(1),
+    .thumb:nth-child(2),
+    .thumb:nth-child(3),
+    .thumb:nth-child(4) {
+        display: none;
+    }
+
+    .offer-card .top .overlay {
+        font-size: 0.7rem;
+    }
+
+    #offers > p {
+        font-size: 0.6rem;
+    }
+
+    #partners h2 {
+        margin: 1rem auto;
+    }
+
+    .foglalas p {
+        font-size: 0.7rem;
+    }
+
+    .footer-left {
+        font-size: 0.6rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-left h3 {
+        font-size: 0.9rem;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    #connect > p {
+        font-size: 0.6rem;
+    }
 }
