@@ -326,7 +326,7 @@ header .top .right a i {
 
 .about-img img {
     /* height: 100%; */
-    width: 100%;
+    width: 80%;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -871,6 +871,10 @@ iframe {
         display: none;
     }
 
+    .main {
+        height: 80vh;
+    }
+
     .main .title {
         justify-content: space-between;
     }
@@ -896,11 +900,12 @@ iframe {
     #about {
         padding-top: 0;
         margin-top: 0;
+        height: 100%;
     }
 
     .about-box {
         flex-direction: column;
-        margin: 0;
+        margin-bottom: 1rem;
     }
 
     .title-text h2 {
@@ -913,6 +918,10 @@ iframe {
 
     .about-img {
         display: none;
+    }
+
+    .about-btns {
+        text-align: center;
     }
 
     .apartman-container {
