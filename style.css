@@ -220,10 +220,72 @@ header .top .right a i {
     color: black;
 }
 
+#sideNav {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+
+    background-color: rgba(56, 163, 165, 0.9);
+    z-index: 69;
+    transition: 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+    padding-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-top: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#menuBtn {
+    display: none;
+    width: 50px;
+    height: 50px;
+
+    background-color: rgba(56, 163, 165, 0.9);
+
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border: 3px;
+    z-index: 70;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#menuBtn img {
+    width: 20px;
+    margin-top: 15px;
+}
+
+.left-logo {
+    display: none;
+}
+
+.left-logo img {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 10%;
+    border-radius: 50%;
+    z-index: 70;
+}
+
 /* Main */
 .main {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), #38a3a5),
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(56, 163, 165)),
         url(images/try_bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -478,7 +540,7 @@ header .top .right a i {
     border-radius: 0.3125rem; /* Lekerekített sarkok: ≈5px */
     cursor: pointer; /* Mutató az egérrel a gomb fölé mozogva */
     transition: 0.5s ease; /* Színváltás animáció */
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
 }
 
 .apartman-btn:hover {
@@ -617,19 +679,18 @@ header .top .right a i {
 #offers h1 {
     font-size: 2rem;
     color: #38a3a5;
-
-    margin-bottom: 2rem;
 }
 
 .offers-container {
     width: 90%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
 
-.offers-container .offer-card {
+.offer-card {
     margin: 1rem;
     width: 100%;
     max-width: 520px;
@@ -699,9 +760,41 @@ p {
     transition: 0.5s ease;
 }
 
-#offers > p {
-    font-size: 0.8rem;
+.offers-container > p {
+    font-size: 1rem;
     color: #38a3a5;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+}
+.item {
+    position: absolute;
+    width: 520px;
+    transition: 0.5s;
+    left: calc(50% - 260px);
+    top: 5%;
+}
+#next,
+#prev {
+    position: absolute;
+    top: 40%;
+    color: #38a3a5;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 40px;
+    z-index: 80;
+    cursor: pointer;
+}
+#next {
+    left: unset;
+    right: 40px;
 }
 
 /* Partners */
@@ -758,6 +851,8 @@ p {
     font-size: 40px;
 }
 
+/* Footer */
+
 .footer-row {
     width: 90%;
     margin: 0 auto;
@@ -779,6 +874,11 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .footer-right {
@@ -862,7 +962,7 @@ iframe {
 
 /* Media quarry */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     header {
         display: none;
     }
@@ -871,8 +971,13 @@ iframe {
         display: none;
     }
 
+    #menuBtn,
+    .left-logo {
+        display: block;
+    }
+
     .main {
-        height: 80vh;
+        min-height: auto;
     }
 
     .main .title {
@@ -922,6 +1027,7 @@ iframe {
 
     .about-btns {
         text-align: center;
+        margin: 0;
     }
 
     .apartman-container {
@@ -937,12 +1043,51 @@ iframe {
         display: none;
     }
 
+    .slider {
+        height: 460px;
+    }
+
+    #offers {
+        min-height: auto;
+    }
+
     .offer-card .top .overlay {
         font-size: 0.7rem;
     }
 
-    #offers > p {
-        font-size: 0.6rem;
+    .offer-card .top .overlay p {
+        width: 70%;
+    }
+
+    .item {
+        position: absolute;
+        width: 480px;
+        transition: 0.5s;
+        left: calc(50% - 240px);
+        top: 5%;
+    }
+
+    #next,
+    #prev {
+        position: absolute;
+        top: 40%;
+        color: #38a3a5;
+        background-color: transparent;
+        border: none;
+        font-size: xxx-large;
+
+        font-weight: bold;
+        left: 10px;
+        z-index: 80;
+        cursor: pointer;
+    }
+    #next {
+        left: unset;
+        right: 10px;
+    }
+
+    .offers-container > p {
+        font-size: 0.8rem;
     }
 
     #partners h2 {
@@ -954,7 +1099,7 @@ iframe {
     }
 
     .footer-left {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         display: flex;
         align-items: center;
     }
