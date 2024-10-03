@@ -19,6 +19,10 @@
 header {
     width: 100%;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 header .top {
@@ -27,10 +31,10 @@ header .top {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
+    margin: 0 20px 0 20px;
 }
 
 header .top .left {
-    width: 40%;
     display: flex;
     align-items: center;
 }
@@ -80,14 +84,18 @@ header .top .right a i {
     color: #38a3a5;
 }
 
+.top-hr {
+    margin: 0 30px 0 30px;
+    border: 1px solid gray;
+}
+
 .nav_img {
-    display: inline-block;
     position: absolute;
     left: 50%;
     top: 10%;
-    transform: translateX(-50%) translateY(-3.5rem);
+    transform: translateX(-50%);
     width: 10rem;
-    border-radius: 50%;
+    border-radius: 3px;
     z-index: 100;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 1ms;
@@ -96,37 +104,31 @@ header .top .right a i {
 .nav {
     background-color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 150px;
     width: 100%;
     transition: top 0.3s ease;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-}
-.nav .left,
-.nav .right {
-    flex: 1;
-    border-top: 2px solid rgb(187, 185, 185);
-    margin: 0 1.5rem 0 1.6rem;
 }
 
 .nav .left ul {
     display: flex;
     list-style-type: none;
-    justify-content: flex-end;
-    padding: 0 2rem;
-    margin-right: 4rem;
+    justify-content: flex-start;
+    gap: 60px;
+    align-items: center;
 }
 
 .nav .right ul {
     display: flex;
     list-style-type: none;
-    justify-content: flex-start;
-    padding: 0 2rem;
-    margin-left: 4rem;
+    justify-content: flex-end;
+    gap: 60px;
+    align-items: center;
 }
 
 .nav .left ul li,
 .nav .right ul li {
-    margin: 1rem 2rem;
+    margin: 1rem auto;
 }
 
 .nav .left ul li a,
@@ -226,23 +228,22 @@ header .top .right a i {
     position: fixed;
     right: -250px;
     top: 0;
-
     background-color: rgba(56, 163, 165, 0.9);
     z-index: 69;
     transition: 0.5s;
 }
 
-nav ul li {
+#sideNav nav ul li {
     list-style: none;
     margin: 50px 20px;
     padding-left: 20px;
 }
 
-nav ul li:first-child {
+#sideNav nav ul li:first-child {
     margin-top: 60px;
 }
 
-nav ul li a {
+#sideNav nav ul li a {
     text-decoration: none;
     color: #fff;
 }
@@ -388,7 +389,7 @@ nav ul li a {
 
 .about-img img {
     /* height: 100%; */
-    width: 80%;
+    width: 70%;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -674,6 +675,7 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #offers h1 {
@@ -682,19 +684,18 @@ nav ul li a {
 }
 
 .offers-container {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .offer-card {
     margin: 1rem;
-    width: 100%;
-    max-width: 520px;
-    border: 1px solid #38a3a5;
+    /* width: 100%; */
+    /* border: 1px solid #38a3a5; */
+
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -735,7 +736,6 @@ nav ul li a {
     background: #fff;
     color: #38a3a5;
     transition: opacity 0.5s ease;
-    padding: 1.2rem;
 }
 
 .offer-card .top .overlay h3,
@@ -745,6 +745,7 @@ p {
 
 .offer-card:hover .overlay {
     opacity: 1;
+    border: 1px solid #38a3a5;
 }
 
 .offer-card:hover .bottom h2 {
@@ -770,31 +771,36 @@ p {
     width: 100%;
     height: 540px;
     overflow: hidden;
+    padding: 1rem;
 }
 .item {
     position: absolute;
-    width: 520px;
+    width: 600px;
     transition: 0.5s;
-    left: calc(50% - 260px);
+    left: calc(50% - 320px);
     top: 5%;
 }
 #next,
 #prev {
     position: absolute;
-    top: 40%;
+    top: 50%;
     color: #38a3a5;
     background-color: transparent;
     border: none;
-    font-size: xxx-large;
+    font-size: 2.5rem;
     font-family: monospace;
     font-weight: bold;
-    left: 40px;
+    left: 60px;
     z-index: 80;
     cursor: pointer;
 }
 #next {
     left: unset;
-    right: 40px;
+    right: 60px;
+}
+
+.offer-btns {
+    margin: 1rem auto;
 }
 
 /* Partners */
