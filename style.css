@@ -568,6 +568,16 @@ header .top .right a i {
     transform: translateY(-7px);
 }
 
+/* Backyard */
+
+.backyard {
+    width: 100%;
+    background: url(images/front.jpg);
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /* Offers */
 
 .offers-hr {
