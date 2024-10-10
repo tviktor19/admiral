@@ -97,8 +97,8 @@ header .top .right a i {
     left: 50%;
     top: 10%;
     transform: translateX(-52%);
-    width: 120px;
-
+    width: 160px;
+    border-radius: 50%;
     z-index: 100;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     transition: 1ms;
@@ -388,7 +388,7 @@ header .top .right a i {
 }
 
 .about-img img {
-    width: 80%;
+    width: 450px;
 
     object-fit: cover;
     border-radius: 5px;
@@ -415,7 +415,7 @@ header .top .right a i {
     /* padding: 0 20px; */
     text-align: justify;
     margin-bottom: 16px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-family: "Poppins", sans-serif;
 }
 
@@ -470,7 +470,7 @@ header .top .right a i {
 }
 
 #apartman img {
-    width: 100%;
+    width: 400px;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     cursor: zoom-in;
@@ -494,17 +494,21 @@ header .top .right a i {
     /* margin-top: 60px; */
     width: 90%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .apartman-desc,
 .penthouse-desc {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
 .apartman-info,
 .penthouse-info {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
+    max-width: 600px;
 }
 
 .apartman-info h1,
@@ -532,7 +536,8 @@ header .top .right a i {
 
 .apartman-images,
 .penthouse-images {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
+    margin: 20px auto;
 }
 
 .apartman-info p,
@@ -599,6 +604,7 @@ header .top .right a i {
 #offers h1 {
     font-size: 2rem;
     color: var(--primary-color);
+    margin-top: 20px;
 }
 
 .offers-container {
